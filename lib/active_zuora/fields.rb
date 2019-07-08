@@ -52,7 +52,7 @@ module ActiveZuora
     end
 
     def clear_changed_attributes
-      if ActiveSupport.version.to_s.to_f >= 5.2
+      if ActiveSupport.version.to_s >= "5.2"
         clear_changes_information
       else
         changed_attributes.clear
